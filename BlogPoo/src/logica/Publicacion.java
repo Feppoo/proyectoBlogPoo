@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Publicacion {
 	private List<Comentario> comentarios = new ArrayList<>();
-	private static int cantPubs;
+	private static int cantPubs = 0;
 	private int codPub;
 	private String titulo;
 	private String texto;
@@ -18,6 +18,7 @@ public class Publicacion {
 		this.titulo = titulo;
 		this.texto = texto;
 		this.creador = creador;
+		codPub = ++cantPubs;
 	}
 
 	public String getTitulo() {
